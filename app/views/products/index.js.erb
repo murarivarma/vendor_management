@@ -1,0 +1,2 @@
+$('#products-list').html('<%= j render (@products) %>');
+$('#products .panel-heading a#product-trigger').attr('href', '<%= new_product_category_product_path(@category) %>');

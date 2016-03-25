@@ -1,0 +1,36 @@
+<div id="inventory-board" class="container-fluid">
+  <%= link_to "Order Management", orders_index_path, class: "btn btn-info pull-right" %>
+  <h1>Inventory</h1>
+  <div class="row">
+    <div id="categories" class="col-md-2">
+      <div class="panel panel-success">
+        <div class="panel-heading">
+          <b>Categories</b>
+        </div>
+          <div id="categories-list" class="list-group">
+            <%= render @product_categories %>
+          </div>
+      </div>
+    </div>
+    <div id="products" class="col-md-2">
+      <div class="panel panel-success">
+        <div class="panel-heading">
+          <%= link_to fa_icon("plus-circle"), "#", id: "product-trigger" , class: "pull-right", remote: true %>
+          <b>Products</b>
+        </div>
+        <div id="products-list" class="list-group">
+        </div>
+      </div>
+    </div>
+    <div id="product" class="col-md-4">
+      <div class="panel panel-success">
+        <div class="panel-heading">
+          <%= link_to fa_icon("pencil-square-o"), "#", id: "product-edit-trigger", class: "pull-right", remote: true %>
+          <b>Product</b>
+        </div>
+        <div id="product-list" class="list-group">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

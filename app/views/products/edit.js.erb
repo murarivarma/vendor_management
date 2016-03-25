@@ -1,0 +1,7 @@
+$('#edit_product').remove();
+$('body').append('<%= j render(partial: "products/edit") %>');
+$('#edit_product').modal('show');
+<% if @save_success %>
+  $('#products-list').append("<%= j render(@product) %>")
+  $('form#edit-product-form')[0].reset();
+<% end %>

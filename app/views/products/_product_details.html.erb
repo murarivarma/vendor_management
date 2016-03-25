@@ -1,0 +1,8 @@
+<dl class="dl-horizontal">
+  <% [:name, :price, :quantity].each do |prop| %>
+    <dt><%= prop.to_s.gsub("_", " ").titlecase %></dt>
+    <dd><i>
+        <%= product.send(prop) %>
+    </dd></i>
+  <% end %>
+</dl>

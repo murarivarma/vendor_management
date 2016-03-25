@@ -1,0 +1,4 @@
+$('#edit_product').modal('hide');
+<% if @save_success %>
+  $('#product #product-list').html('<%= j render(partial: "products/product_details", locals: {product: @product}) %>');
+<% end %>

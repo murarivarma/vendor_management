@@ -1,0 +1,2 @@
+$('#product-list').html('<%= j render(partial: "products/product_details", locals: {product: @product}) %>');
+$('#product .panel-heading a#product-edit-trigger').attr('href', '<%= edit_product_category_product_path(@category, @product) %>')
