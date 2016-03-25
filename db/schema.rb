@@ -38,9 +38,9 @@ ActiveRecord::Schema.define(version: 20160324091754) do
 
   create_table "orders", force: :cascade do |t|
     t.integer  "customer_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-    t.integer  "order_status"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.integer  "order_status", default: 1
   end
 
   add_index "orders", ["customer_id"], name: "index_orders_on_customer_id"
